@@ -8,10 +8,10 @@ source_file = pd.read_excel('source.xlsx')
 destination_file= pd.read_excel('destination.xlsx')
 #reading one coloumn
 source_coloumn =pd.read_excel('source.xlsx',usecols=['subject'])
-
+#loading workbook 
 wb = openpyxl.load_workbook('destination.xlsx')
 sheet = wb.active
-
+#merging cells
 sheet.merge_cells('A1:A4')
 sheet.cell(row=1,column=1).value= 'merge cells '
 
